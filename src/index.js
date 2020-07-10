@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/App";
+import App from "./common/App";
 import { ThemeProvider } from "styled-components";
-import * as theme from "./styled-components/theme";
+import GlobalStyle from "./style/theme/globalStyles";
+import theme from "./style/theme/theme";
+
+const root = document.getElementById("root");
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <App />{" "}
+    <GlobalStyle />
+    <App />
   </ThemeProvider>,
-  document.getElementById("root")
+  root
 );
