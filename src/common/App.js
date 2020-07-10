@@ -1,28 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
-import { MainWrapper } from "./styled-components/Wrapper";
+import Main from "./styled-components/Wrapper";
 import Card, { InnerCard } from "../app/components/Card";
 
 const CustomCard = styled(Card)``;
 
 const CardsWrapper = styled.section`
   width: 100%;
-  display: flex;
+  display: ${({ maxCol }) => (maxCol && "flex") || "block"};
   justify-content: space-between;
   align-items: flex-start;
-  margin: 20px 0;
+  margin: 0 0 25px;
   flex-wrap: ${({ maxCol }) => (maxCol && "wrap") || "nowrap"};
 
   ${CustomCard} {
     flex: 1 1 ${({ maxCol }) => (maxCol && `${100 / maxCol}%`) || "auto"};
-
-    ${InnerCard} {
-      box-shadow: 0 10px 0 2px ${({ theme }) => theme.colors.black};
-    }
+    ${({ maxCol }) =>
+      maxCol &&
+      css`
+        margin: 25px 0;
+      `}
 
     p {
       font-size: ${({ noCardShadow }) => (noCardShadow && "initial") || "12px"};
+    }
+
+    ${InnerCard} {
+      box-shadow: 0 10px 0 2px ${({ theme }) => theme.colors.black};
     }
   }
 
@@ -50,10 +55,12 @@ CardsWrapper.propTypes = {
 
 const App = () => {
   return (
-    <MainWrapper>
-      <Card>
-        <h1>Our App</h1>
-      </Card>
+    <Main>
+      <CardsWrapper>
+        <Card>
+          <h1>Our App</h1>
+        </Card>
+      </CardsWrapper>
       <CardsWrapper maxCol={5}>
         <CustomCard>
           <h2>Card Title</h2>
@@ -113,6 +120,7 @@ const App = () => {
       </CardsWrapper>
       <CardsWrapper noCardShadow>
         <Card>
+          <h2>Section Header</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
             accusantium ad, animi asperiores autem consequuntur corporis culpa
@@ -125,7 +133,7 @@ const App = () => {
           </p>
         </Card>
       </CardsWrapper>
-    </MainWrapper>
+    </Main>
   );
 };
 
