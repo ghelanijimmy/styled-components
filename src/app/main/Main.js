@@ -9,8 +9,6 @@ import {
 import Input from "../../common/styled-components/input";
 import FadeInWrapper from "../../common/styled-components/Animation";
 
-//TODO attributes
-
 const Main = () => {
   return (
     <Wrapper>
