@@ -14,9 +14,9 @@ const MainOuterWrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.main};
 `;
 
-const Main = ({ children }) => (
-  <MainOuterWrapper>
+const Wrapper = ({ children, className }) => (
+  <MainOuterWrapper className={className}>
     <MainInnerWrapper>{children}</MainInnerWrapper>
   </MainOuterWrapper>
 );
-export default Main;
+export default Wrapper;
