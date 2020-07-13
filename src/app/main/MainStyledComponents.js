@@ -38,14 +38,13 @@ export const CardsWrapper = styled.section`
         ${InnerCard} {
           box-shadow: 0 10px 0 2px ${({ theme }) => theme.colors.black};
         }
-
-        ${Button} {
-          background-color: ${({ theme }) => theme.colors.main};
-          color: ${({ theme }) => theme.colors.lighter};
-          width: 100%;
-          display: block;
-        }
       `}
+    ${Button} {
+      background-color: ${({ theme }) => theme.colors.main};
+      color: ${({ theme }) => theme.colors.lighter};
+      width: 100%;
+      display: block;
+    }
   }
 
   ${InnerCard} {
@@ -97,6 +96,8 @@ export const CustomInnerWrapper = styled(Wrapper)`
     ${Button} {
       background: ${({ theme }) => theme.colors.lighter};
       color: initial;
+      border: none;
+      width: initial;
     }
   }
 `;

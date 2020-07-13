@@ -29,7 +29,7 @@ const Main = () => {
               Accusantium enim error et illum inventore labore laboriosam
               necessitatibus nesciunt placeat, possimus quas rem.
             </p>
-            <Button>CTA</Button>
+            <Button inverse={true}>CTA</Button>
           </FlexCard>
           <FlexCard>
             <h2>Card Title</h2>
