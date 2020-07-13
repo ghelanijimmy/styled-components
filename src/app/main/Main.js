@@ -4,10 +4,11 @@ import Wrapper from "../../common/styled-components/Wrapper";
 import {
   CardsWrapper,
   CustomInnerWrapper,
-  FlexCard,
+  FlexCard
 } from "./MainStyledComponents";
 import Input from "../../common/styled-components/input";
 import FadeInWrapper from "../../common/styled-components/Animation";
+import Button from "../../common/styled-components/Button";
 
 const Main = () => {
   return (
@@ -28,7 +29,7 @@ const Main = () => {
               Accusantium enim error et illum inventore labore laboriosam
               necessitatibus nesciunt placeat, possimus quas rem.
             </p>
-            <button>CTA</button>
+            <Button>CTA</Button>
           </FlexCard>
           <FlexCard>
             <h2>Card Title</h2>
@@ -39,7 +40,7 @@ const Main = () => {
               Accusantium enim error et illum inventore labore laboriosam
               necessitatibus nesciunt placeat, possimus quas rem.
             </p>
-            <button>CTA</button>
+            <Button>CTA</Button>
           </FlexCard>
           <FlexCard>
             <h2>Card Title</h2>
@@ -50,7 +51,7 @@ const Main = () => {
               Accusantium enim error et illum inventore labore laboriosam
               necessitatibus nesciunt placeat, possimus quas rem.
             </p>
-            <button>CTA</button>
+            <Button>CTA</Button>
           </FlexCard>
           <FlexCard>
             <h2>Card Title</h2>
@@ -61,7 +62,7 @@ const Main = () => {
               Accusantium enim error et illum inventore labore laboriosam
               necessitatibus nesciunt placeat, possimus quas rem.
             </p>
-            <button>CTA</button>
+            <Button>CTA</Button>
           </FlexCard>
           <FlexCard>
             <h2>Card Title</h2>
@@ -72,7 +73,7 @@ const Main = () => {
               Accusantium enim error et illum inventore labore laboriosam
               necessitatibus nesciunt placeat, possimus quas rem.
             </p>
-            <button>CTA</button>
+            <Button>CTA</Button>
           </FlexCard>
         </CardsWrapper>
         <CardsWrapper simple>
@@ -105,7 +106,8 @@ const Main = () => {
               <p>
                 Changes input type based on passed prop or defaults to password
               </p>
-              <Input type="password" />
+              <Input placeholder="Input" type="password" />
+              <Button>CTA</Button>
             </FlexCard>
             <FlexCard>
               <h3>Static Prop Attribute:</h3>
@@ -113,7 +115,8 @@ const Main = () => {
               <p>
                 Disables input field based on passed prop or defaults to false
               </p>
-              <Input disabled />
+              <Input placeholder="Input" disabled />
+              <Button>CTA</Button>
             </FlexCard>
             <FlexCard>
               <h3>Dynamic Prop Attribute</h3>
@@ -122,7 +125,8 @@ const Main = () => {
                 Changes padding top and bottom based on passed prop or defaults
                 to 10px
               </p>
-              <Input size="40px" />
+              <Input placeholder="Input" size="40px" />
+              <Button>CTA</Button>
             </FlexCard>
           </CardsWrapper>
         </CustomInnerWrapper>

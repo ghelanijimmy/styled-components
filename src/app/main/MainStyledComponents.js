@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import Card, { InnerCard } from "../components/Card";
 import PropTypes from "prop-types";
 import Wrapper from "../../common/styled-components/Wrapper";
+import Button from "../../common/styled-components/Button";
 
 export const FlexCard = styled(Card)``;
 
@@ -36,6 +37,13 @@ export const CardsWrapper = styled.section`
 
         ${InnerCard} {
           box-shadow: 0 10px 0 2px ${({ theme }) => theme.colors.black};
+        }
+
+        ${Button} {
+          background-color: ${({ theme }) => theme.colors.main};
+          color: ${({ theme }) => theme.colors.lighter};
+          width: 100%;
+          display: block;
         }
       `}
   }
@@ -86,10 +94,14 @@ export const CustomInnerWrapper = styled(Wrapper)`
       background-color: ${({ theme }) => theme.colors.dark};
       box-shadow: 0 10px 0 2px ${({ theme }) => theme.colors.light};
     }
+    ${Button} {
+      background: ${({ theme }) => theme.colors.lighter};
+      color: initial;
+    }
   }
 `;
 
 CardsWrapper.propTypes = {
   simple: PropTypes.bool,
-  maxCol: PropTypes.number,
+  maxCol: PropTypes.number
 };
