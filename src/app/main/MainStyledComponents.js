@@ -62,11 +62,9 @@ export const CardsWrapper = styled.section`
   }
 `;
 
-export const CustomInnerWrapper = styled(Wrapper)`
+export const CustomWrapper = styled(Wrapper)`
   & > div {
-    max-width: 100%;
-    padding: 0;
-    margin-top: 60px;
+    padding: initial 0;
   }
   height: auto;
   min-height: 0;
@@ -104,5 +102,5 @@ export const CustomInnerWrapper = styled(Wrapper)`
 
 CardsWrapper.propTypes = {
   simple: PropTypes.bool,
-  maxCol: PropTypes.number
+  maxCol: PropTypes.number,
 };

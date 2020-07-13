@@ -9,9 +9,13 @@ export const MainInnerWrapper = styled.div`
 
 const MainOuterWrapper = styled.section`
   width: 100%;
-  min-height: 100vh;
   display: block;
+  background-color: transparent;
+`;
+
+export const AppWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.main};
+  min-height: 100vh;
 `;
 
 const Wrapper = ({ children, className }) => (

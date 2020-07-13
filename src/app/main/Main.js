@@ -1,99 +1,97 @@
 import React from "react";
 import Card from "../components/Card";
-import Wrapper from "../../common/styled-components/Wrapper";
-import {
-  CardsWrapper,
-  CustomInnerWrapper,
-  FlexCard
-} from "./MainStyledComponents";
+import Wrapper, { AppWrapper } from "../../common/styled-components/Wrapper";
+import { CardsWrapper, CustomWrapper, FlexCard } from "./MainStyledComponents";
 import Input from "../../common/styled-components/input";
 import FadeInWrapper from "../../common/styled-components/Animation";
 import Button from "../../common/styled-components/Button";
 
 const Main = () => {
   return (
-    <Wrapper>
+    <AppWrapper>
       <FadeInWrapper delay=".5s" duration=".75s">
-        <CardsWrapper>
-          <Card>
-            <h1>Section One</h1>
-          </Card>
-        </CardsWrapper>
-        <CardsWrapper maxCol={5}>
-          <FlexCard>
-            <h2>Card Title</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusantium aliquid amet, aut eius error et, facilis, id nam quas
-              quo recusandae reprehenderit saepe sequi similique voluptate.
-              Accusantium enim error et illum inventore labore laboriosam
-              necessitatibus nesciunt placeat, possimus quas rem.
-            </p>
-            <Button inverse={true}>CTA</Button>
-          </FlexCard>
-          <FlexCard>
-            <h2>Card Title</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusantium aliquid amet, aut eius error et, facilis, id nam quas
-              quo recusandae reprehenderit saepe sequi similique voluptate.
-              Accusantium enim error et illum inventore labore laboriosam
-              necessitatibus nesciunt placeat, possimus quas rem.
-            </p>
-            <Button>CTA</Button>
-          </FlexCard>
-          <FlexCard>
-            <h2>Card Title</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusantium aliquid amet, aut eius error et, facilis, id nam quas
-              quo recusandae reprehenderit saepe sequi similique voluptate.
-              Accusantium enim error et illum inventore labore laboriosam
-              necessitatibus nesciunt placeat, possimus quas rem.
-            </p>
-            <Button>CTA</Button>
-          </FlexCard>
-          <FlexCard>
-            <h2>Card Title</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusantium aliquid amet, aut eius error et, facilis, id nam quas
-              quo recusandae reprehenderit saepe sequi similique voluptate.
-              Accusantium enim error et illum inventore labore laboriosam
-              necessitatibus nesciunt placeat, possimus quas rem.
-            </p>
-            <Button>CTA</Button>
-          </FlexCard>
-          <FlexCard>
-            <h2>Card Title</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Accusantium aliquid amet, aut eius error et, facilis, id nam quas
-              quo recusandae reprehenderit saepe sequi similique voluptate.
-              Accusantium enim error et illum inventore labore laboriosam
-              necessitatibus nesciunt placeat, possimus quas rem.
-            </p>
-            <Button>CTA</Button>
-          </FlexCard>
-        </CardsWrapper>
-        <CardsWrapper simple>
-          <Card>
-            <h2>Section Header</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-              accusantium ad, animi asperiores autem consequuntur corporis culpa
-              debitis dolorem dolorum eaque eligendi et eum ex facere labore
-              laboriosam minima minus, nam nemo nulla quae quo repellendus
-              repudiandae saepe tenetur veniam. Aliquam atque consequatur
-              doloremque facilis magnam nam quas, totam voluptas! Accusamus
-              consectetur excepturi illo iure laborum possimus quibusdam quo.
-              Vero?
-            </p>
-          </Card>
-        </CardsWrapper>
+        <Wrapper>
+          <CardsWrapper>
+            <Card>
+              <h1>Section One</h1>
+            </Card>
+          </CardsWrapper>
+          <CardsWrapper maxCol={5}>
+            <FlexCard>
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusantium aliquid amet, aut eius error et, facilis, id nam
+                quas quo recusandae reprehenderit saepe sequi similique
+                voluptate. Accusantium enim error et illum inventore labore
+                laboriosam necessitatibus nesciunt placeat, possimus quas rem.
+              </p>
+              <Button inverse={true}>CTA</Button>
+            </FlexCard>
+            <FlexCard>
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusantium aliquid amet, aut eius error et, facilis, id nam
+                quas quo recusandae reprehenderit saepe sequi similique
+                voluptate. Accusantium enim error et illum inventore labore
+                laboriosam necessitatibus nesciunt placeat, possimus quas rem.
+              </p>
+              <Button>CTA</Button>
+            </FlexCard>
+            <FlexCard>
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusantium aliquid amet, aut eius error et, facilis, id nam
+                quas quo recusandae reprehenderit saepe sequi similique
+                voluptate. Accusantium enim error et illum inventore labore
+                laboriosam necessitatibus nesciunt placeat, possimus quas rem.
+              </p>
+              <Button>CTA</Button>
+            </FlexCard>
+            <FlexCard>
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusantium aliquid amet, aut eius error et, facilis, id nam
+                quas quo recusandae reprehenderit saepe sequi similique
+                voluptate. Accusantium enim error et illum inventore labore
+                laboriosam necessitatibus nesciunt placeat, possimus quas rem.
+              </p>
+              <Button>CTA</Button>
+            </FlexCard>
+            <FlexCard>
+              <h2>Card Title</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Accusantium aliquid amet, aut eius error et, facilis, id nam
+                quas quo recusandae reprehenderit saepe sequi similique
+                voluptate. Accusantium enim error et illum inventore labore
+                laboriosam necessitatibus nesciunt placeat, possimus quas rem.
+              </p>
+              <Button>CTA</Button>
+            </FlexCard>
+          </CardsWrapper>
+          <CardsWrapper simple>
+            <Card>
+              <h2>Section Header</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                accusantium ad, animi asperiores autem consequuntur corporis
+                culpa debitis dolorem dolorum eaque eligendi et eum ex facere
+                labore laboriosam minima minus, nam nemo nulla quae quo
+                repellendus repudiandae saepe tenetur veniam. Aliquam atque
+                consequatur doloremque facilis magnam nam quas, totam voluptas!
+                Accusamus consectetur excepturi illo iure laborum possimus
+                quibusdam quo. Vero?
+              </p>
+            </Card>
+          </CardsWrapper>
+        </Wrapper>
       </FadeInWrapper>
       <FadeInWrapper delay="1s" duration="1s">
-        <CustomInnerWrapper>
+        <CustomWrapper>
           <CardsWrapper>
             <Card>
               <h1>Section Two</h1>
@@ -129,9 +127,9 @@ const Main = () => {
               <Button>CTA</Button>
             </FlexCard>
           </CardsWrapper>
-        </CustomInnerWrapper>
+        </CustomWrapper>
       </FadeInWrapper>
-    </Wrapper>
+    </AppWrapper>
   );
 };
 
