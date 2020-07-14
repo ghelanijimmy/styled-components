@@ -86,7 +86,7 @@ export const CardsWrapper = styled.section`
 
 export const CustomWrapper = styled(Wrapper)`
   & > div {
-    padding: initial 0;
+    padding: 0;
   }
   height: auto;
   min-height: 0;
