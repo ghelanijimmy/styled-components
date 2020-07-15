@@ -29,14 +29,36 @@ export const CardsWrapper = styled.section`
       css`
         margin: 25px 0;
         flex: 1 1 ${({ maxCol }) => (maxCol && `${100 / maxCol}%`) || "auto"};
+        transition: 0.125s linear all;
 
         p {
           font-size: ${({ noCardShadow }) =>
             (noCardShadow && "initial") || "12px"};
+          transition: 0.125s linear all;
         }
 
         ${InnerCard} {
           box-shadow: 0 10px 0 2px ${({ theme }) => theme.colors.black};
+        }
+
+        &:hover {
+          ${InnerCard} {
+            background-color: ${({ theme }) => theme.colors.main};
+            transition: 0.125s linear all;
+
+            p {
+              color: white;
+            }
+
+            h2 {
+              color: ${({ theme }) => theme.colors.lighter};
+            }
+
+            ${Button} {
+              background-color: ${({ theme }) => theme.colors.lighter};
+              color: ${({ theme }) => theme.colors.main};
+            }
+          }
         }
       `}
     ${Button} {
@@ -64,7 +86,7 @@ export const CardsWrapper = styled.section`
 
 export const CustomWrapper = styled(Wrapper)`
   & > div {
-    padding: initial 0;
+    padding: 0;
   }
   height: auto;
   min-height: 0;
@@ -97,10 +119,30 @@ export const CustomWrapper = styled(Wrapper)`
       border: none;
       width: initial;
     }
+
+    &:hover {
+      ${InnerCard} {
+        background-color: ${({ theme }) => theme.colors.lighter};
+        box-shadow: 0 10px 0 2px ${({ theme }) => theme.colors.dark};
+        transition: 0.125s linear all;
+
+        p,
+        h2,
+        h3,
+        h4 {
+          color: initial;
+          transition: 0.125s linear all;
+        }
+        ${Button} {
+          background-color: ${({ theme }) => theme.colors.dark};
+          color: ${({ theme }) => theme.colors.lighter};
+        }
+      }
+    }
   }
 `;
 
 CardsWrapper.propTypes = {
   simple: PropTypes.bool,
-  maxCol: PropTypes.number,
+  maxCol: PropTypes.number
 };
