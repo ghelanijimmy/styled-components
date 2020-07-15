@@ -144,5 +144,5 @@ export const CustomWrapper = styled(Wrapper)`
 
 CardsWrapper.propTypes = {
   simple: PropTypes.bool,
-  maxCol: PropTypes.number
+  maxCol: PropTypes.number,
 };
